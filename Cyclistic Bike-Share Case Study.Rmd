@@ -1,2 +1,0 @@
-The purpose of this script is to consolidate downloaded Q3-2023 Divvy data into a single dataframe and then conduct simple analysis to help answer the key question:
-“In what ways do member and casual riders use Divvy bikes differently?”
