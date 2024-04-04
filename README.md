@@ -77,14 +77,19 @@ I also set the threshold to 0.6 instead of the default threshold of 0.5, this si
 I then went ahead and ran the back test again, but this time I passed in the new predictors. Notice that I got rid of the Open, High, Low, Close, and Volume columns, the reason is that those are just absolute numbers, which means that they are not very informative to the model; as a matter of fact, the ratios are the most informative part since they use percentage instead of using absolute values and allow the model to use information of multiple candles as well.
 
 Results
+
 1.Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool for this case?
 While not infallible, Machine Learning provides important insights into future market or price movements. based on the ability for Machine Learning to provide a result solely on time series data and historical prices of the index, I would say that it can be used just to get a sense of the directionality of the market as in this model.
+
 2.Could we get an accurate prediction on the direction of the price solely on historical data?
 It is hard to get an accurate prediction on the direction of the market, to be close to accurate a lot of factors such as technical, fundamental, and sentimental analysis along with macro factors such as federal fund rate, price indices, unemployment, real estate, inflation, etc. would have to be considered.
+
 3.can a model be created or improved to predict more accurate outcomes or results?
 Yes, the model can always be improved, one can build quite a bit on this model and get far by using different data such as hourly data, minute by minute data, macro-economic factors, technical and fundamental analysis, etc., the algorithm can also be improved by tweaking random forest parameters and the prediction threshold, more predictors can be added as well, and so on.
+
 4. would I use this model to trade in the S&P500? 
 Absolutely not, even though the model predicted 57.3% of the days the market would go up, it reflects a good result considering I only worked with historical prices of the index and time series data; however, using this model for purposes of trading the market would not be recommended.
 
 Conclusion
+
 Even though the results were not favorable, the model has some predictive value, the market went up 57.3% of the days, which is better than the baseline where it shows that the market went up about 53% of the days. Machine Learning can be reliable to some extent for market price directionality prediction, but it must be combined with domain expertise, data quality, multiple external factors, and potential limitations.
