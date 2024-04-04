@@ -1,3 +1,5 @@
+To see the full project go to: https://mavenanalytics.io/profile/Hugo-Villa/196248405
+
 Predicting the direction of S&P500 Stock price using Machine Learning S&P 500 (GSPC)
 
 This project aims at creating a machine learning model to predict the direction of the S&P500 index price based on historical data, ticker symbol: GSPC. 
