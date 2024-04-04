@@ -1,5 +1,4 @@
-<img width="474" alt="image" src="https://github.com/Hug9V/Portfolio-Projects/assets/148833107/35141d94-ec7e-472d-b5b7-da170789ab03">Predicting the direction of S&P500 Stock price using Machine Learning 
-S&P 500 (GSPC)
+Predicting the direction of S&P500 Stock price using Machine Learning S&P 500 (GSPC)
 This project aims at creating a machine learning model to predict the direction of the S&P500 index price based on historical data, ticker symbol: GSPC. 
 Project Steps 
 •	Download data using the yfinance package in python
@@ -27,7 +26,7 @@ Hypothesis
 Downloading the data
 I downloaded the historical data of the S&P500 from yahoo finance by loading a package called yfinance into Jupiter notebook, this package calls the yahoo API to download daily stock and index prices. In this case I did not implement a ROCCC approach to determine the credibility of the data.
 Nonetheless, I’m providing yahoo finance S&P500 index historical data website as reference: S&P 500 (^GSPC) Historical Data - Yahoo Finance
-Using the history method in python, I decided to take a look at all the historical data starting 12-30-1927 where there was only a 90-stock index, up to March 14,2024 to find out if there is an overall upswing or downswing trend on the market. <img width="521" alt="pic1" src="https://github.com/Hug9V/Portfolio-Projects/assets/148833107/363ba208-b4e6-4cec-a973-4a582ea22a7d">
+Using the history method in python, I decided to take a look at all the historical data starting 12-30-1927 where there was only a 90-stock index, up to March 14,2024 to find out if there is an overall upswing or downswing trend on the market. 
 Cleaning and visualizing the data
 I then proceeded to visualize and clean the data using pandas; I first plotted the data in the data frame to have a better look at the trend, here we can see the trading dates on the x-axis, and the closing price on the y-axis; it is obvious that the overall trend of the index fund is in an upswing position since late 1980, which means that we would’ve been better off buying some stock in early 1990, or even in 2009 or 2010.
 To create the initial machine learning model, I used the Open, High, Low, Close, and Volume columns, the Dividends and Stock Split columns are more suitable for individual stocks; therefore, I decided to eliminate them. 
@@ -54,7 +53,7 @@ In the 6,000 plus days I was looking at, the sp500 went up 53.5% percent of days
 Adding extra predictors to the model
 Would adding more predictors improve the accuracy of the model?
 To answer the question, I had to create a variety of rolling averages (means) within a horizon of 2 days, 5 days, 60 days, 1 yr, and 4 yrs., these inputs helped me determine if the stock would go up or down; in other words, the algorithm calculated the mean Close price in the last 2 trading days, the last 5 trading days, the last 60 trading days, the last year, and the last 4 years, and then I looked at the ratio between today's Closing price and the Closing price in those periods.
-Improving the model
+Improving the model.
 
 I slightly modified the model by changing some of the parameters, I increased the number of estimators to 200, and the min-sample split was reduced to 50. The goal here is to have a bit more control over how the algorithm defines what becomes a 1 (up) and what becomes a 0 (down); therefore, I went ahead and used the predict_proba method.
 
@@ -62,7 +61,6 @@ I also set the threshold to 0.6 instead of the default threshold of 0.5, this si
 I then went ahead and ran the back test again, but this time I passed in the new predictors. Notice that I got rid of the Open, High, Low, Close, and Volume columns, the reason is that those are just absolute numbers, which means that they are not very informative to the model; as a matter of fact, the ratios are the most informative part since they use percentage instead of using absolute values and allow the model to use information of multiple candles as well.
 
 Results
-
 1.Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool for this case?
 While not infallible, Machine Learning provides important insights into future market or price movements. based on the ability for Machine Learning to provide a result solely on time series data and historical prices of the index, I would say that it can be used just to get a sense of the directionality of the market as in this model.
 2.Could we get an accurate prediction on the direction of the price solely on historical data?
@@ -73,5 +71,4 @@ Yes, the model can always be improved, one can build quite a bit on this model a
 Absolutely not, even though the model predicted 57.3% of the days the market would go up, it reflects a good result considering I only worked with historical prices of the index and time series data; however, using this model for purposes of trading the market would not be recommended.
 
 Conclusion
-
 Even though the results were not favorable, the model has some predictive value, the market went up 57.3% of the days, which is better than the baseline where it shows that the market went up about 53% of the days. Machine Learning can be reliable to some extent for market price directionality prediction, but it must be combined with domain expertise, data quality, multiple external factors, and potential limitations.
