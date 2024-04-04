@@ -87,7 +87,7 @@ It is hard to get an accurate prediction on the direction of the market, to be c
 3.can a model be created or improved to predict more accurate outcomes or results?
 Yes, the model can always be improved, one can build quite a bit on this model and get far by using different data such as hourly data, minute by minute data, macro-economic factors, technical and fundamental analysis, etc., the algorithm can also be improved by tweaking random forest parameters and the prediction threshold, more predictors can be added as well, and so on.
 
-4. would I use this model to trade in the S&P500? 
+4. would I use this model to trade in the S&P500?
 Absolutely not, even though the model predicted 57.3% of the days the market would go up, it reflects a good result considering I only worked with historical prices of the index and time series data; however, using this model for purposes of trading the market would not be recommended.
 
 Conclusion
